@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    text-align: center;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #ff7eb3, #ff758c); }
+    100% { background: linear-gradient(135deg, #758cff, #7e83ff); }
+}
+header {
+    margin-top: 20vh;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+main {
+    min-height: 100%;
+}
+#three-container {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 50vh;
+}
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+.image:hover {
+    transform: scale(1.05);
+}
+.description {
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+.sticky-text {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .description {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2em;
+    }
+    .description {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        margin-top: 15vh;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        margin-top: 10vh;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .description {
+        font-size: 0.8em;
+    }
+}
